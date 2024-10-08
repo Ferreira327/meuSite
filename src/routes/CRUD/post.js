@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require("path");
 const routes = express.Router();
-const postController = require(path.resolve("src","controllers","post"));
+const postController = require(path.resolve("src","controllers","Post"));
 const upload = require(path.resolve("config","multer"));
 const auth = require(path.resolve("src","middlewares","auth"))
 
