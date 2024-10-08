@@ -1,5 +1,5 @@
 const path = require("path");
-const User = require(path.resolve("src","database","models","user"));
+const User = require(path.resolve("src","database","Models","user"));
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');

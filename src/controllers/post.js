@@ -1,5 +1,5 @@
 const path = require("path");
-const Post = require(path.resolve("src","database","models","post"));
+const Post = require(path.resolve("src","database","Models","post"));
 const dotenv = require('dotenv');
 const cloudinary = require(path.resolve("config", "cloudinary"));
 dotenv.config();

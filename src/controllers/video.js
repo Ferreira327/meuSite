@@ -1,5 +1,5 @@
 const path = require("path");
-const Video = require(path.resolve("src","database","models","Video"));
+const Video = require(path.resolve("src","database","Models","Video"));
 const dotenv = require('dotenv');
 const cloudinary = require(path.resolve("config", "cloudinary"));
 dotenv.config();
