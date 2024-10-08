@@ -1,0 +1,26 @@
+const Sequelize = require('sequelize');
+const path = require('path');
+const database = require(path.resolve("config","db"));
+
+const Video = database.define('video', {
+    id: {
+        type: Sequelize.INTEGER,
+        autoIncrement: true,
+        allowNull: false,
+        primaryKey : true
+    },
+    titulo: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    conteudo:{
+        type: Sequelize.TEXT,
+        allowNull: false
+    },
+    img:{
+        type: Sequelize.JSON,
+        allowNull: false
+    }
+    });
+
+module.exports = Video;

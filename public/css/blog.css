@@ -1,0 +1,185 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color:  #1b1b1b;
+    display: block;
+    width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: jetbrains mono;
+    text-decoration: none;
+}
+
+
+.cabecalho{
+    background-image: linear-gradient(180deg, #000000 50%,#141414 80%, #1b1b1b 100%);
+    margin: 0px;
+    height: 450px;
+}
+h2{
+  margin-left: 10px;
+}
+
+h1{
+    padding: 50px;
+    padding-bottom: 60px;
+    font-size: 250%;
+    color: #00e4ff;
+    text-align: center;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+@media (max-width: 1300px) {
+    nav {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+
+.linksNav{
+    transition: color 0.3s ease; 
+    color: white;
+    font-size: 150%;
+}
+
+.linksNav:hover {
+    color: rgb(247, 0, 255); /* Cor ao passar o mouse */
+  }
+
+
+form{
+    width: 100%;
+    text-align: center;
+}
+
+.alinhar{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.pesquisar{
+    border: 5px solid rgb(0, 204, 255);
+    height: 50px;
+    border-radius: 10px;
+    width: 50%;
+}
+
+
+
+footer{
+    height: 100px;
+    background-color: black;
+    padding: 30px;
+}
+
+
+
+  .copyright{
+    color: white;
+    font-weight: 700;
+    text-align: center;
+
+  }
+
+
+.posts{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.post{
+    background-color: white;
+    border: 5px solid rgb(0, 217, 255);
+    width: 30%;
+    height: 350px;
+    margin-left: 15px;
+    margin-right: 15px;
+    min-width: 400px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    position: relative;
+
+}
+
+
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Ocupa metade da altura da div */
+    background-color: rgba(0, 0, 0, 0.842); /* Preto com 70% de opacidade */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Esconde o overlay inicialmente */
+    transition: opacity 0.3s ease; /* Adiciona uma transição suave */
+  }
+  
+  .post:hover .overlay {
+
+    opacity: 1; /* Mostra o overlay ao passar o mouse */
+  }
+
+  .post-topic {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: #e74c3c;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+}
+
+.post img {
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+  }
+
+  .perPost{
+    min-width: 400px;
+    width: 30%;
+    margin: 0px;
+    padding: 0px;
+
+    
+    display: block;
+    
+  }
+
+
+  @media (max-width: 768px) {
+
+    .post{
+      min-width: 300px;
+      height: 280px;
+      margin-left: auto;
+      margin-right: auto;
+  
+    }
+
+    .perPost{
+      min-width: 300px;}
+
+      
+  
+  
+  }

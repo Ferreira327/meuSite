@@ -1,0 +1,39 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4; /* Cor de fundo clara */
+}
+
+.container {
+    text-align: center;
+}
+
+.botao {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white; /* Cor do texto branca */
+    transition: background-color 0.3s ease; /* Efeito de transição suave */
+}
+
+.botao-azul {
+    background-color: #3498db; /* Azul */
+}
+
+.botao-azul:hover {
+    background-color: #2980b9; /* Azul mais escuro */
+}
+
+.botao-roxo {
+    background-color: #9b59b6; /* Roxo */
+}
+
+.botao-roxo:hover {
+    background-color: #8e44ad; /* Roxo mais escuro */
+}

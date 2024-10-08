@@ -1,0 +1,89 @@
+body{
+    background-image: url("/img/v617batch2-bb-01-technology.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+*{
+    font-family: jetbrains mono;
+}
+
+h1{
+    text-align: center;
+    color: rgb(12, 0, 119);
+}
+
+.ql-container {
+    background-color: #010050; /* Cor de fundo desejada */
+  
+}
+
+.ql-editor {
+    color: #ffffff; /* Cor da fonte desejada */
+  }
+
+.criacao{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #ffffff;
+    width: 90%;
+    border:5px solid rgb(0, 4, 255);
+    border-radius: 10px;
+    height: 90%;
+
+}
+
+.botao{
+    margin-top: 20px;
+    width: 10%;
+    height: 40px;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    border: 3px solid black;
+}
+
+.labelConteudo{
+    margin-bottom: 30px;
+}
+
+.titulo{
+    display: block;
+    margin-bottom: 10px;
+    justify-content: center;
+    font-size: 150%;
+
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 50px
+    
+}
+
+.botao{
+    margin-top: 100px;
+    align-self: center;
+   
+}
+
+.conteudo{
+    display: block;
+    font-size: 150%;
+
+}
+
+.inputTitulo{
+    width: 70%;
+    height: 50px;
+    border:3px solid #010050;
+    border-radius: 8px;
+}
+
+#imageInput{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}

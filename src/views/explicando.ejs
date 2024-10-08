@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/explicando.css">
+    <title>meu_blog</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <h1>explicando</h1>
+
+        <nav>
+            <a href="/home" class="linksNav">home</a>
+            <a href="/blog" class="linksNav">meu_blog</a>
+            <a href="/explicando" class="linksNav">explicando</a>
+        </nav>
+
+        <div class ="alinhar">
+        <form>
+            <!-- <input type="search" name="q" placeholder="Pesquisar..." class="pesquisar"> -->
+        </form>
+        </div>
+
+    </header>
+
+    <div class="videos">
+        <% for (let i = 0; i < videos.length; i++) { %> 
+        <div class="video" id="<%=videos[i].id%>">
+            <div class="separacaoImagem">
+                <img src="<%= videos[i].img %>" alt="Imagem do video">
+            </div>  
+            <h2><%= videos[i].titulo %></h2>  
+        </div>
+
+        <% } %>
+     
+    </div>
+
+    
+
+
+    <footer>
+        <p class="copyright">2024 | GABRIEL FERREIRA DE CASTRO</p>
+    </footer>
+
+
+    <script src="/js/video.js"></script>
+</body>
+</html>

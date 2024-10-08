@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com Quill</title>
+    <link rel="stylesheet" type="text/css" href="/css/criarVideo.css">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+</head>
+<body>
+    <div class="criacao">
+        <h1>Adicionar Video</h1>
+
+        <form method="post" action="/video" class="formulario" enctype="multipart/form-data">
+            <div>
+                <label for="titulo" class="titulo">Título</label>
+                <input type="text" id="titulo" name="titulo" class="inputTitulo" required>
+            </div>
+
+            <div>
+
+                <label for="imagem" class="titulo">Imagem</label>
+                <input name="imagem" type="file" accept="image/*" id="imageInput"> 
+
+                <label for="conteudo" class="conteudo">Conteúdo</label>   
+
+                <input type="textarea" name="conteudo" id="conteudo" class="inputTitulo">
+            </div>
+
+            <button type="submit" class="botao">Adicionar Post</button>
+        </form>
+    </div>
+
+
+</body>
+</html>
