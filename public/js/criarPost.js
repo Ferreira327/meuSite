@@ -3,7 +3,11 @@ var quill = new Quill(editor, {
   // ...
   modules: {
     toolbar: [
-      ['image'] 
+      [{ header: [1, 2, false] }],
+      ['bold', 'italic', 'underline'],
+      ['image', 'code-block'],
+      [{ 'align': [] }],
+      ['clean']
     ],
       imageResize: {
         displaySize: true,

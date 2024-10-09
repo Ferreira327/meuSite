@@ -8,6 +8,10 @@ const auth = require(path.resolve("src","middlewares","auth"))
 routes.post("/video",upload.single('imagem'),auth,videoController.videoStore);
 routes.get("/explicando",videoController.getVideo);
 routes.get("/video/:id",videoController.getVideoPerID);
-routes.delete("video/:id",auth,videoController.deleteVideo)
+routes.delete("/video/:id",videoController.deleteVideo);
+routes.get("/videoAdmin",videoController.getAdmin);
+routes.get("/videoEditar/:id",videoController.getVideoPerIDadmin);
+routes.put("/videoEditar/:id",upload.single("imagem"),videoController.putVideo)
+
 
 module.exports = routes;

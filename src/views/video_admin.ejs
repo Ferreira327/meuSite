@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/video_admin.css">
+    <title>Video Admin</title>
+</head>
+<body>
+    <h1>VIDEOS</h1>
+    
+    <div class = "videos">
+
+        <a href="/criarVideo" class="sair"><img src="/img/wired-outline-49-plus-circle-hover-rotation.png" class="icone_sair"></a>
+        <% for (let i = 0; i < videos.length; i++) { %>
+        <div class = "video">
+            <p><%=videos[i].titulo%></p>
+            <div class = "icones">
+                <a href="/videoEditar/<%=videos[i].id%>" class="sair"><img src="/img/wired-outline-35-edit-hover-circle.png" class="icone_sair"></a>
+                <a  href="#" data-id="<%=videos[i].id%>" class="sair" onclick="deleteVideo(this,event)"><img src="/img/wired-outline-185-trash-bin-hover-empty.png" class="icone_sair" ></a>
+            </div>
+        </div>
+        <% } %>
+
+    </div>
+
+    <script src="/js/videoAdmin.js"></script>
+    
+</body>
+</html>

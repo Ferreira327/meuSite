@@ -1,0 +1,66 @@
+body{
+    font-family: jetbrains mono;
+    background-color: #2736B9;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+h1{
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    font-size: 300%;
+}
+
+.videos{
+    min-width: 440px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 70%;
+    border-radius: 20px;
+    background-color: #E7E7E7;
+    min-height: 300px;
+    justify-content: space-around;
+    align-items: center;
+    gap:20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.video{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border: 3px solid #FF00F5;
+    height: 70px;
+    width: 90%;
+    border-radius: 10px;
+}
+
+.video p{
+    width: 50%;
+    text-wrap: wrap;
+    font-weight: 600;
+    font-size: 120%;
+    margin-left: 10px;
+}
+
+.icones{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 10%;
+    height: 100%;
+}
+
+.icone_sair {
+    width: 100%;  /* Ajusta o tamanho da imagem para 50px de largura */
+    height: 50px; /* Ajusta o tamanho da imagem para 50px de altura */
+    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+    display: block; /* Remove o espaço abaixo da imagem */
+}
+

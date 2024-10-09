@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 const cloudinary = require(path.resolve("config", "cloudinary"));
 dotenv.config();
 
-class PostController{
+class VideoController{
     
     static async videoStore(req, res) {
         try {
@@ -64,8 +64,22 @@ class PostController{
         }
       }
 
+      static async getVideoPerIDadmin(req, res) {
+        try {
+          const id = await Number(req.params.id);
+          const findVideo = await Video.findByPk(id);
+          res.render('editarVideo', {post:findVideo});
+        } catch (erro) {
+          res
+            .status(500)
+            .json({ message: `${erro.message} - Falha ao mostrar Post` });
+        }
+      }
+
+
 
       static async deleteVideo(req, res) {
+        console.log("teste")
         try {
           const id = await Number(req.params.id);
           const videoDelete = await Video.findByPk(id);
@@ -78,7 +92,68 @@ class PostController{
             .json({ message: `${erro.message} - Falha ao deletar Video` });
         }
       }
+
+      static async getAdmin(req, res) {
+        try {
+            Video.findAll().then((resultado) => {
+              let achados = [];
+              resultado.forEach((element) => {
+                achados.push({
+                  id: element.id,
+                  titulo: element.titulo,
+                  conteudo: element.conteudo,
+                  img: element.img.url,
+                  createdAt : element.createdAt,
+                  updatedAt : element.updatedAt
+      
+                });
+              });
+              res.render('video_admin', {videos:achados}); 
+            });
+          } catch (erro) {
+            res.status(500).json({ message: `${erro.message} - Falha ao ver Videos` });
+          }
+            
+      }
+
+      static async putVideo(req, res) {
+        try {
+          const editVideo = await Video.findByPk(req.params.id);
+          let imagem, imagem2, titulo, conteudo;
+          if (req.file) {
+            await cloudinary.uploader.destroy(editVideo.img.public_id, {
+              folder: "uploads",
+            });
+            imagem = await cloudinary.uploader.upload(req.file.path, {
+              folder: "uploads",
+            });
+            imagem2 = await { url: imagem.url, public_id: imagem.public_id };
+          } else {
+            imagem2 = editVideo.img;
+          }
+    
+          if (req.body.titulo) {
+            titulo = req.body.titulo;
+          }
+          if (req.body.conteudo) {
+            conteudo = req.body.conteudo;
+          }
+    
+          const object = {
+            titulo: titulo,
+            conteudo: conteudo,
+            img: imagem2,
+          };
+          editVideo.update(object);
+          res.status(201).json({ message: "editado com sucesso!", Video: editVideo });
+        } catch (erro) {
+          res
+            .status(500)
+            .json({ message: `${erro.message} - Falha ao editar Video` });
+        }
+      
+      }
   
 }
 
-module.exports = PostController
+module.exports = VideoController

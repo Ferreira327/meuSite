@@ -16,4 +16,5 @@ routes.get('/admin', auth,(req, res) => {
     res.render('criarVideo'); 
   });
 
+
 module.exports = routes;
