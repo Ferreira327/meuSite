@@ -1,9 +1,11 @@
-body{
+html,body{
     margin: 0px;
     padding: 0px;
     background-color:  #1b1b1b;
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    height: 100%;
 }
 
 * {
@@ -74,12 +76,16 @@ form{
     width: 50%;
 }
 
+.pagina{
+  height: 90%;
+}
 
 
 footer{
-    height: 100px;
+    height: 10%;
     background-color: black;
     padding: 30px;
+    
 }
 
 
