@@ -85,7 +85,8 @@ footer{
         font-size: 150%;
     }
 
-    .texto img{
-        max-width: 200px;
+    .ql-editor img{
+        max-width: 100%;
+        height: auto;
     }
 }
