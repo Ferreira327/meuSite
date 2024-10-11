@@ -1,7 +1,7 @@
 html,body{
     margin: 0px;
     padding: 0px;
-    background-color:  #010050;
+    background-color:  #272727;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -17,9 +17,11 @@ html,body{
 
 
 .cabecalho{
-    background-image: linear-gradient(180deg, #07001b 50%,#00014e 80%, #010050 100%);
+    background-color: black;
+    border-bottom: 5px solid rgb(255, 0, 255);
     margin: 0px;
-    height: 450px;
+    height: 250px;
+    margin-bottom: 100px;
 }
 
 h1{
@@ -79,6 +81,8 @@ footer{
     height: 100px;
     background-color: black;
     padding: 30px;
+    margin-top: 40px;
+
 }
 
 
@@ -165,5 +169,5 @@ h2{
 }
 
 .pagina{
-    height: 90%;
+
 }

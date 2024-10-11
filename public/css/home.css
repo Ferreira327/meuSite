@@ -26,15 +26,18 @@ body{
 .cabecalho{
   background-image: linear-gradient(180deg, #000000 50%,#141414 80%, #1b1b1b 100%);
     margin: 0px;
-    height: 600px;
+    height: 700px;
     width: 100%;
+}
+
+.meu_Nome{
+  padding: 30px;
+  margin-bottom: 50px;
 }
 
 
 
 h1{
-    padding: 50px;
-    padding-bottom: 60px;
     font-size: 250%;
     color: #00e4ff;
     text-align: center;
@@ -54,6 +57,27 @@ nav{
     margin-left: 40px;
 }
 
+.gl{
+  margin-top: 100px;
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+}
+
+.logos{
+  margin-bottom: 10px;
+  width: 70px;
+}
+
+.Links{
+  color: white;
+}
+
+.publi{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
 
 
 
@@ -179,6 +203,7 @@ footer{
   }
 
   .overlay {
+    padding: 10px;
     position: absolute;
     top: 0;
     left: 0;
@@ -224,9 +249,13 @@ footer{
     nav{
       justify-content: space-around;
     }
+
+    .publi{
+      margin-bottom: 30px;
+    }
   
     .cabecalho{
-      height: 450px;
+      height: 600px;
     }
   
     .conheca{
