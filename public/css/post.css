@@ -86,6 +86,11 @@ footer{
 
 @media (max-width: 768px) {
 
+    .ql-editor{
+
+        width: 90%;
+    }
+
     .tituloPost{
         font-size: 150%;
     }
