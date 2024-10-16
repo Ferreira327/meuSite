@@ -79,7 +79,6 @@ class VideoController{
 
 
       static async deleteVideo(req, res) {
-        console.log("teste")
         try {
           const id = await Number(req.params.id);
           const videoDelete = await Video.findByPk(id);

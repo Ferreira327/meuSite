@@ -23,9 +23,9 @@ const User = database.define('users', {
     hooks: {
             afterSync: async () => {
             try {
-                const hashedPassword = await bcrypt.hash("1234", 10);
+                const hashedPassword = await bcrypt.hash(process.env.ADMIN_PASSWORD, 10);
                 await User.create({
-                user: "gabriel",
+                user: process.env.USER,
                 password: hashedPassword // Certifique-se de armazenar senhas de forma segura (hashing)
                 });}
                 catch (error) {

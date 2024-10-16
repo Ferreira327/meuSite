@@ -8,9 +8,9 @@ const auth = require(path.resolve("src","middlewares","auth"))
 routes.post("/post",upload.single('imagem'),auth,postController.postStore);
 routes.get("/blog",postController.getPost)
 routes.get("/post/:id",postController.getPostPerID)
-routes.delete("/post/:id",postController.deletePost)
-routes.get("/postAdmin",postController.getAdmin);
-routes.get("/postEditar/:id",postController.getPostPerIDadmin);
-routes.put("/postEditar/:id",upload.single("imagem"),postController.putPost)
+routes.delete("/post/:id",auth,postController.deletePost)
+routes.get("/postAdmin",auth,postController.getAdmin);
+routes.get("/postEditar/:id",auth,postController.getPostPerIDadmin);
+routes.put("/postEditar/:id",upload.single("imagem"),auth,postController.putPost)
 
 module.exports = routes;

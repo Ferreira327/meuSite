@@ -79,14 +79,16 @@ footer{
 }
 
 
+.ql-editor img{
+    max-width: 100%;
+    height: auto;
+}
+
 @media (max-width: 768px) {
 
     .tituloPost{
         font-size: 150%;
     }
 
-    .ql-editor img{
-        max-width: 100%;
-        height: auto;
-    }
+    
 }
