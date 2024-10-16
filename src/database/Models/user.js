@@ -25,7 +25,7 @@ const User = database.define('users', {
             try {
                 const hashedPassword = await bcrypt.hash(process.env.ADMIN_PASSWORD, 10);
                 await User.create({
-                user: process.env.USER,
+                user: process.env.ADMIN_USER,
                 password: hashedPassword // Certifique-se de armazenar senhas de forma segura (hashing)
                 });}
                 catch (error) {
